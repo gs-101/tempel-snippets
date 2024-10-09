@@ -58,6 +58,7 @@
     (java-ts-mode . "java")
     (js-ts-mode . "js")
     (json-ts-mode . "json")
+    (nix-ts-mode . "nix")
     (rust-ts-mode . "rust")
     (rustic-mode . "rust")
     (toml-ts-mode . "toml")
