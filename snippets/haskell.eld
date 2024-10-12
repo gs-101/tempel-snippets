@@ -1,0 +1,53 @@
+haskell-mode haskell-ts-mode
+
+(case
+ "case " (p "var") " of" n>
+ (p "cond") " -> " (p "value") n>
+ p n>
+ "otherwise -> " (p "other"))
+
+(class
+ "class " (p "Name") " where" n>
+ q)
+
+(d
+ "{-" n>
+ q n>
+ "-}")
+
+(da
+ "data " (p "Type") " = " q)
+
+(fun
+ (p "function-name" function-name) " :: " (p "type") n>
+ (s function-name) " " (p "arguments") n>
+ q)
+
+(fune
+ (p "function-name" function-name) " :: " (p "type") n>
+ (s function-name) " = error \"Not implemented: \" " (s function-name))
+
+(import
+ "import " (p "qualified") " " (p "Module (symbols)") " " (p "as alias"))
+
+(ins
+ "instance " n>
+ (p "(Show a) => ") n>
+ (p "Ord") n>
+ (p "DataType") " where" n>
+ q)
+
+(main
+ "main :: IO ()" n>
+ "main = do" n>
+ q)
+
+(mod
+ "module " (p "Module") " where" n>
+ q)
+
+(pr
+ "print " q)
+
+(prag
+ "{-# " (p "PRAGMA") " #-}")
