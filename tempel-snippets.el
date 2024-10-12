@@ -61,6 +61,7 @@
     (js-ts-mode . "js")
     (json-ts-mode . "json")
     (nix-ts-mode . "nix")
+    (lua-ts-mode . "lua")
     (protobuf-ts-mode . "protobuf")
     (rust-ts-mode . "rust")
     (rustic-mode . "rust")
