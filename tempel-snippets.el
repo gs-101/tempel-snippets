@@ -56,6 +56,7 @@
     (git-commit-ts-mode . "git-commit")
     (go-ts-mode . "go")
     (go-mod-ts-mode . "go-mod")
+    (haskell-ts-mode . "haskell")
     (java-ts-mode . "java")
     (js-ts-mode . "js")
     (json-ts-mode . "json")
