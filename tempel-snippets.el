@@ -62,6 +62,7 @@
     (json-ts-mode . "json")
     (nix-ts-mode . "nix")
     (lua-ts-mode . "lua")
+    (markdown-ts-mode . "markdown")
     (protobuf-ts-mode . "protobuf")
     (rust-ts-mode . "rust")
     (rustic-mode . "rust")
