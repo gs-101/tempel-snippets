@@ -53,6 +53,7 @@
     (cmake-ts-mode . "cmake")
     (csharp-ts-mode . "csharp")
     (dockerfile-ts-mode . "dockerfile")
+    (elixir-ts-mode . "elixir")
     (gdscript-ts-mode . "gdscript")
     (git-commit-ts-mode . "git-commit")
     (go-ts-mode . "go")
