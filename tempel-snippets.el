@@ -67,6 +67,7 @@
     (protobuf-ts-mode . "protobuf")
     (rust-ts-mode . "rust")
     (rustic-mode . "rust")
+    (swift-ts-mode . "swift")
     (toml-ts-mode . "toml")
     (typescript-ts-base-mode . "typescript")
     (yaml-ts-mode . "yaml"))
