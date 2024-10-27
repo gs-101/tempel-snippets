@@ -66,6 +66,7 @@
     (lua-ts-mode . "lua")
     (markdown-ts-mode . "markdown")
     (protobuf-ts-mode . "protobuf")
+    (ruby-ts-mode . "ruby")
     (rust-ts-mode . "rust")
     (rustic-mode . "rust")
     (scala-ts-mode . "scala")
