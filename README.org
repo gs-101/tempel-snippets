@@ -1,0 +1,110 @@
+#+title: Tempel Snippets - Rudimentary YASnippet Translation
+
+#+html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Greek_Script_from_Rosetta_Stone_%2836140196440%29.jpg/640px-Greek_Script_from_Rosetta_Stone_%2836140196440%29.jpg" align="right" width="30%">
+
+Tempel Snippets is an effort on translating [[https://github.com/joaotavora/yasnippet][YASnippet]] snippets to the [[https://github.com/minad/tempel][Tempel]] format,
+using [[https://github.com/Crandel/tempel-collection][tempel-collection]] as its core implementation (the =.el= file).
+These snippets were translated using gpt-4o, and tested and tweaked by me.
+
+#+html: <table><tr><td><img src="https://github.com/gs-101/tempel-snippets/blob/screenshots/bibtex.gif?raw=true" align="left"></td><td><img src="https://github.com/gs-101/tempel-snippets/blob/screenshots/nix.gif?raw=true" align="left"></td><td><img src="https://github.com/gs-101/tempel-snippets/blob/screenshots/emacs-lisp.gif?raw=true" align="left"></td></tr></table>
+
+* Configuration
+
+I'll only consider uploading this package when I'm sure that any issues are fixed.
+If you want to install it, consider using a source-based package manager, such as [[https://github.com/progfolio/elpaca][elpaca]],
+or the newer ~package-vc-install~, included as of Emacs 30+.
+Below are ~use-package~ example configurations for Tempel, aswell as different ways of installing this package.
+
+** ~package-vc-install~
+
+#+begin_src emacs-lisp
+  (use-package tempel
+    :bind
+    ("C-c i s" . tempel-insert)
+    :ensure t)
+
+  (use-package tempel-snippets
+    :after tempel
+    :vc (:url "https://github.com/gs-101/tempel-snippets")
+    :ensure t)
+#+end_src
+
+** [[https://github.com/radian-software/straight.el][Straight]]
+
+#+begin_src emacs-lisp
+  (use-package tempel
+    :bind
+    ("C-c i s" . tempel-insert)
+    :ensure t)
+
+  (use-package tempel-snippets
+    :straight (tempel-snippets :host github :repo "gs-101/tempel-snippets")
+    :after tempel
+    :ensure t)
+#+end_src
+
+** [[https://github.com/progfolio/elpaca][Elpaca]]
+
+#+begin_src emacs-lisp
+  (elpaca elpaca-use-package
+          (elpaca-use-package-mode))
+
+  (use-package tempel
+    :bind
+    ("C-c i s" . tempel-insert)
+    :ensure t)
+
+  (use-package tempel-snippets
+    :host github :repo "gs-101/tempel-snippets"
+    :after tempel
+    :ensure t)
+#+end_src
+
+* Comparison
+
+So, how does this package differ from the existing [[https://github.com/Crandel/tempel-collection][tempel-collection]]?
+
+1. This package is meant to be a plain translation of [[https://github.com/AndreaCrotti/yasnippet-snippets][YASnippet Snippets]], not introducing any new snippets
+2. Template names are based on the original snippet's keys, so there might be some [[https://github.com/Crandel/tempel-collection/pull/61#discussion_r1741429831][conflicts]] with autocompletion
+   - Manual inseartion is recommended, as is demonstrated on the configuration example
+3. Since this is directly based on YASnippet Snippets, more modes and snippets are included, since it's an older project
+
+* Known Issues
+
+** Functionality
+
+- I haven't used YASnippet prior to working on this, so some functionality might differ from the original.
+- I don't have experience with all the modes included, so there might be some issues with the snippets I couldn't catch.
+- Parent snippets such as [[./snippets/c-lang-common.eld][c-lang-common]] currently have no implementation.
+
+** Indentation
+
+There's some issues with indentation, specially in the insertion of brackets.
+
+* Contributing
+
+If you're interested in contributing, here are the currently missing modes:
+
+- [ ] f90
+- [ ] faust
+- [ ] html
+- [ ] julia
+- [ ] ned
+- [ ] nesc
+- [ ] nsis
+- [ ] nxml
+- [ ] odin
+- [ ] php
+- [ ] raku
+- [ ] rjsx
+- [ ] ruby
+- [ ] terraform
+- [ ] typerex
+
+Also, see the previous section on known issues.
+  
+* Acknowledgements
+
+- [[https://github.com/Crandel][Crandel]], for creating [[https://github.com/Crandel/tempel-collection][tempel-collection]]
+- [[https://github.com/AndreaCrotti][Andrea Crotti]], maintainer of [[https://github.com/AndreaCrotti/yasnippet-snippets][YASnippet Snippets]]
+- [[https://github.com/AndreaCrotti/yasnippet-snippets/graphs/contributors][YASnippet Snippets Contributors]]
