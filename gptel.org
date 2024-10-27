@@ -1,0 +1,214 @@
+:PROPERTIES:
+:GPTEL_MODEL: gpt-4o
+:GPTEL_BACKEND: Github Models
+:GPTEL_SYSTEM: You are a large language model living in Emacs and a helpful assistant. Respond concisely.
+:GPTEL_BOUNDS: nil
+:END:
+
+I'm working on package called tempel-snippets, which is an effort to translate all the [[https://github.com/AndreaCrotti/yasnippet-snippets][YASnippet]] snippets to the newer [[https://github.com/minad/tempel][tempel]] format. Here are some resources for you:
+
+- Tempel Syntax
+
+  All the Tempo syntax elements are fully supported. The syntax elements are
+  described in detail in the docstring of ~tempo-define-template~ in tempo.el. We
+  document the important ones here:
+
+  - "string" Inserts a string literal.
+  - ~p~ Inserts an unnamed placeholder field.
+  - ~n~ Inserts a newline.
+  - ~>~ Indents with ~indent-according-to-mode~.
+  - ~r~ Inserts the current region.
+    If no region is active, quits the containing template when jumped to.
+  - ~r>~ Acts like ~r~, but indent region.
+  - ~n>~ Inserts a newline and indents.
+  - ~&~ Insert newline unless there is only whitespace between line start and point.
+  - ~%~ Insert newline unless there is only whitespace between point and line end.
+  - ~o~ Like ~%~ but leaves the point before newline.
+  - ~(s NAME)~ Inserts a named field.
+  - ~(p PROMPT <NAME> <NOINSERT>)~ Insert an optionally named field with a prompt.
+    The ~PROMPT~ is displayed directly in the buffer as default value. If ~NOINSERT~
+    is non-nil, no field is inserted. Then the minibuffer is used for prompting
+    and the value is bound to ~NAME~.
+  - ~(r PROMPT <NAME> <NOINSERT>)~ Insert region or act like ~(p ...)~.
+  - ~(r> PROMPT <NAME> <NOINSERT>)~ Act like ~(r ...)~, but indent region.
+
+  Furthermore Tempel supports syntax extensions:
+
+  - ~(p FORM <NAME> <NOINSERT>)~ Like ~p~ described above, but ~FORM~ is evaluated.
+  - ~(FORM ...)~ Other Lisp forms are evaluated. Named fields are lexically bound.
+  - ~q~ Quits the containing template when jumped to.
+
+- Original ~haskell-mode~ YASnippet snippets
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: case
+  # key: case
+  # expand-env: ((yas-indent-line 'fixed))
+  # --
+  case ${1:var} of
+  ${2:cond} -> ${3:value}
+  $0
+  otherwise -> ${4:other}
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: data
+  # key: da
+  # --
+  data ${1:Type} = $2
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: doc
+  # key: d
+  # --
+  {-
+    $0
+  -}
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: fun
+  # key: fun
+  # expand-env: ((yas-indent-line 'fixed))
+  # --
+  ${1:function-name} :: ${2:type}
+  $1 ${3:arguments} $0
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: fune
+  # key: fune
+  # --
+  ${1:function-name} :: ${2:type}
+  $1 = $0error "Not implemented: $1"
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: import
+  # key: import
+  # --
+  import${1: qualified} ${2:Module${3:(symbols)}}${4: as ${5:alias}}
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: instance
+  # key: ins
+  # --
+  instance ${1:${2:(Show a)} => }${3:Ord} ${4:DataType} where
+  $0
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: main function
+  # key: main
+  # expand-env: ((yas-indent-line 'fixed))
+  # --
+  main :: IO ()
+  main = do $0
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: module
+  # key: mod
+  # --
+  module ${1:Module} where
+  $0
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: new class
+  # key: class
+  # expand-env: ((yas-indent-line 'fixed))
+  # --
+  class ${1:Name} where
+  $0
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: pragma
+  # key: prag
+  # --
+  {-# ${1:PRAGMA} #-}
+  #+end_src
+
+  #+begin_src snippet
+  # -*- mode: snippet -*-
+  # name: print
+  # key: pr
+  # --
+  print $0
+  #+end_src
+
+- Translated ~haskell-mode~ templates
+
+  #+begin_src emacs-lisp
+    haskell-mode haskell-ts-mode
+
+    (case
+     "case " (p "var") " of" n>
+     (p "cond") " -> " (p "value") n>
+     p n>
+     "otherwise -> " (p "other"))
+
+    (class
+     "class " (p "Name") " where" n>
+     q)
+
+    (d
+     "{-" n>
+     q n>
+     "-}")
+
+    (da
+     "data " (p "Type") " = " q)
+
+    (fun
+     (p "function-name" function-name) " :: " (p "type") n>
+     (s function-name) " " (p "arguments") n>
+     q)
+
+    (fune
+     (p "function-name" function-name) " :: " (p "type") n>
+     (s function-name) " = error \"Not implemented: \" " (s function-name))
+
+    (import
+     "import " (p "qualified") " " (p "Module (symbols)") " " (p "as alias"))
+
+    (ins
+     "instance " n>
+     (p "(Show a) => ") n>
+     (p "Ord") n>
+     (p "DataType") " where" n>
+     q)
+
+    (main
+     "main :: IO ()" n>
+     "main = do" n>
+     q)
+
+    (mod
+     "module " (p "Module") " where" n>
+     q)
+
+    (pr
+     "print " q)
+
+    (prag
+     "{-# " (p "PRAGMA") " #-}")
+ #+end_src
+
+Use the YASnippet key (the string starting with ~# key~) as the translated snippet name. Sort them alphabetically.
+
+Translate the snippets for ~insert-mode~.
