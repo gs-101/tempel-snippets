@@ -89,7 +89,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [ ] faust
 - [ ] html
 - [ ] julia
-- [ ] ned
+- [X] ned
 - [ ] nesc
 - [ ] nsis
 - [ ] nxml
