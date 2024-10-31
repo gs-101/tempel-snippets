@@ -50,6 +50,7 @@
 (defvar tempel-snippets--aliases
   '((c++-ts-mode . "c++")
     (c-ts-mode . "c")
+    (clojure-ts-mode . "clojure")
     (cmake-ts-mode . "cmake")
     (csharp-ts-mode . "csharp")
     (dockerfile-ts-mode . "dockerfile")
