@@ -63,6 +63,7 @@
     (java-ts-mode . "java")
     (js-ts-mode . "js")
     (json-ts-mode . "json")
+    (julia-ts-mode . "julia")
     (nix-ts-mode . "nix")
     (lua-ts-mode . "lua")
     (markdown-ts-mode . "markdown")
