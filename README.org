@@ -98,7 +98,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [ ] raku
 - [ ] rjsx
 - [ ] terraform
-- [ ] typerex
+- [X] typerex
 
 Also, see the previous section on known issues.
   

@@ -74,6 +74,7 @@
     (scala-ts-mode . "scala")
     (swift-ts-mode . "swift")
     (toml-ts-mode . "toml")
+    (typerex-mode . "tuareg")
     (typescript-ts-base-mode . "typescript")
     (yaml-ts-mode . "yaml"))
   "Aliases for derived modes, for compatibility with ones not found in Emacs core.
