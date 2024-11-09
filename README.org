@@ -86,7 +86,7 @@ There's some issues with indentation, specially in the insertion of brackets.
 If you're interested in contributing, here are the currently missing modes:
 
 - [X] f90
-- [ ] faust
+- [X] faust
 - [ ] html
 - [ ] julia
 - [X] ned
