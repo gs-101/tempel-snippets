@@ -87,7 +87,7 @@ If you're interested in contributing, here are the currently missing modes:
 
 - [X] f90
 - [X] faust
-- [ ] html
+- [X] html
 - [ ] julia
 - [X] ned
 - [ ] nesc
