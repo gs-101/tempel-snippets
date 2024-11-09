@@ -91,7 +91,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [X] ned
 - [X] julia
 - [ ] nesc
-- [ ] nsis
+- [X] nsis
 - [X] nxml
 - [ ] odin
 - [ ] php
