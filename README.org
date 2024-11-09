@@ -92,7 +92,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [X] ned
 - [ ] nesc
 - [ ] nsis
-- [ ] nxml
+- [X] nxml
 - [ ] odin
 - [ ] php
 - [ ] raku
