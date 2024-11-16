@@ -90,7 +90,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [X] html
 - [X] ned
 - [X] julia
-- [ ] nesc
+- [X] nesc
 - [X] nsis
 - [X] nxml
 - [ ] odin
