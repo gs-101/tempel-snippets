@@ -93,7 +93,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [X] nesc
 - [X] nsis
 - [X] nxml
-- [ ] odin
+- [X] odin
 - [ ] php
 - [ ] raku
 - [ ] rjsx
