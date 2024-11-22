@@ -96,7 +96,6 @@ If you're interested in contributing, here are the currently missing modes:
 - [X] odin
 - [ ] php
 - [X] raku
-- [ ] rjsx
 - [ ] terraform
 - [X] typerex
 
