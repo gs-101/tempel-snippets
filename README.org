@@ -94,7 +94,7 @@ If you're interested in contributing, here are the currently missing modes:
 - [X] nsis
 - [X] nxml
 - [X] odin
-- [ ] php
+- [X] php
 - [X] raku
 - [ ] terraform
 - [X] typerex

@@ -67,6 +67,7 @@
     (nix-ts-mode . "nix")
     (lua-ts-mode . "lua")
     (markdown-ts-mode . "markdown")
+    (php-ts-mode . "php")
     (protobuf-ts-mode . "protobuf")
     (ruby-ts-mode . "ruby")
     (rust-ts-mode . "rust")
