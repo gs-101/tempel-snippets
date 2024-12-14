@@ -80,26 +80,6 @@ So, how does this package differ from the existing [[https://github.com/Crandel/
 ** Indentation
 
 There's some issues with indentation, specially in the insertion of brackets.
-
-* Contributing
-
-If you're interested in contributing, here are the currently missing modes:
-
-- [X] f90
-- [X] faust
-- [X] html
-- [X] ned
-- [X] julia
-- [X] nesc
-- [X] nsis
-- [X] nxml
-- [X] odin
-- [X] php
-- [X] raku
-- [ ] terraform
-- [X] typerex
-
-Also, see the previous section on known issues.
   
 * Acknowledgements
 
