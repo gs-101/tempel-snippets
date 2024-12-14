@@ -1,30 +1,32 @@
-;;; tempel-snippets.el --- Convertion of yasnippet snippets to the Tempel format --- -*- lexical-binding: t -*-
+;;; tempel-snippets.el --- Conversion of yasnippet-snippets to the Tempel format -*- lexical-binding: t -*-
 
 ;; Author: Gabriel Santos
-;; Created: 2024
-;; Version: 1.0.0
-;; Package-Requires: ((tempel "0.5") (emacs "29.1"))
 ;; URL: https://github.com/gs-101/tempel-snippets
 ;; Keywords: convenience, snippets
 
-;; This file is not part of GNU Emacs
+;; Package-Version: 1.0.0
+;; Package-Requires: ((tempel "0.5") (emacs "29.1"))
 
-;; This program is free software: you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
+;; SPDX-License-Identifier: GPL-3.0-or-later
+
+;; This file is not part of GNU Emacs.
+
+;; This file is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published
+;; by the Free Software Foundation, either version 3 of the License
 ;; (at your option) any later version.
 
-;; This program is distributed in the hope that it will be useful,
+;; This file is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
-;; Snippet collection for the Tempel package, containing converted snippets from the yasnippet collection. Based on tempel-collection.
+;; Snippet collection for the Tempel package, containing converted snippets from the YASnippet collection. Based on tempel-collection.
 
 ;;; Code:
 
