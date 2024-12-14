@@ -778,6 +778,15 @@ python-base-mode
 (utf8
  "# -*- coding: utf-8 -*-")
 
+(uv
+ "#!/usr/bin/uv run" n
+ "# /// script" n
+ "# dependencies = [" n
+ "# " p n
+ "# ]" n
+ "# ///" n
+ q)
+
 (wh
  "while " (p "True") ":" n>
  q)
