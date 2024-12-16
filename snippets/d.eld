@@ -111,7 +111,7 @@ d-mode
     p n>
     "}")
 
-(version "version (" p ")" n>
+(version "version (" (p (completing-read "Choose a value: " '("unittest" "DigitalMars" "GNU" "LDC" "SDC" "Windows" "linux" "OSX" "FreeBSD" "OpenBSD" "NetBSD" "DragonFlyBSD" "BSD" "Posix" "Android" "X64" "X86_64" "ARM" "PPC" "LittleEndian" "BigEndian" "D_BetterC" "D_Coverage" "D_Ddoc" "D_InlineAsm_X86" "D_InlineAsm_X86_64" "D_LP64" "D_X32" "D_HardFloat" "D_SoftFloat" "D_PIC" "D_SIMD" "D_AVX" "D_AVX2" "D_Version2" "D_NoBoundsChecks" "D_ObjectiveC" "Core" "Std" "assert" "none" "all"))) ")" n>
          "{" n>
          p n>
          "}")

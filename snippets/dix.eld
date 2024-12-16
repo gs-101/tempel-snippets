@@ -67,7 +67,7 @@ dix-mode
 
 (<se
  :when (progn (backward-char 2) (and (not (dix-enclosing-is-mono-section)) (not (member (dix-enclosing-elt 'noerror) '("l" "r" "i" "g" "sdefs")))))
- "<section id=\"" (p "main") "\" type=\"" (p "standard") "\">"
+ "<section id=\"" (p "main") "\" type=\"" (p (completing-read "Choose a value: " '("standard" "inconditional" "postblank" "preblank"))) "\">"
  q n
  "</section>")
 

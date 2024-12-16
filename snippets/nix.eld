@@ -90,9 +90,9 @@ nix-mode nix-ts-mode
  "longDescription = ''" n>
  p n>
  "'';" n>
- "license = licenses." (p "license") ";" n>
+ "license = licenses." (p (completing-read "Choose a license: " '("agpl3" "asl20" "bsd1" "bsd2" "bsd3" "free" "gpl2" "gpl2Only" "gpl2Plus" "gpl3" "gpl3Only" "gpl3Plus" "isc" "lgpl21Only" "lgpl21Plus" "lgpl2Only" "lgpl2Plus" "lgpl3" "lgpl3Only" "mit" "mpl20" "ofl" "unfree"))) ";" n>
  "maintainers = with maintainers; [" p "];" n>
- "platforms = platforms." (p "platforms") ";" n>
+ "platforms = platforms." (p (completing-read "Choose a platform: " '("all" "allBut" "arm" "cygwin" "darwin" "freebsd" "gnu" "i686" "illumos" "linux" "mesaPlatforms" "mips" "netbsd" "none" "openbsd" "unix" "x86"))) ";" n>
  "};" n>
  "})")
 
@@ -122,9 +122,9 @@ nix-mode nix-ts-mode
  "longDescription = ''" n>
  "" p n>
  "'';" n>
- "license = licenses." (p "license") ";" n>
+ "license = licenses." (p (completing-read "Choose a license: " '("agpl3" "asl20" "bsd1" "bsd2" "bsd3" "free" "gpl2" "gpl2Only" "gpl2Plus" "gpl3" "gpl3Only" "gpl3Plus" "isc" "lgpl21Only" "lgpl21Plus" "lgpl2Only" "lgpl2Plus" "lgpl3" "lgpl3Only" "mit" "mpl20" "ofl" "unfree"))) ";" n>
  "maintainers = with maintainers; [" p "];" n>
- "platforms = platforms." (p "platforms") ";" n>
+ "platforms = platforms." (p (completing-read "Choose a platform: " '("all" "allBut" "arm" "cygwin" "darwin" "freebsd" "gnu" "i686" "illumos" "linux" "mesaPlatforms" "mips" "netbsd" "none" "openbsd" "unix" "x86"))) ";" n>
  "};" n>
  "})" n)
 

@@ -106,8 +106,8 @@ java-mode java-ts-mode
  "}")
 
 (m
- (p "visibility") " {" n>
- p n
+ (p (completing-read "Choose a modifier: " '("public" "private" "protected" ""))) " {" n>
+ q n
  "}")
 
 (new
