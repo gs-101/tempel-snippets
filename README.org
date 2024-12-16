@@ -4,7 +4,7 @@
 
 Tempel Snippets is an effort on translating [[https://github.com/joaotavora/yasnippet][YASnippet]] snippets to the [[https://github.com/minad/tempel][Tempel]] format,
 using [[https://github.com/Crandel/tempel-collection][tempel-collection]] as its core implementation (the =.el= file).
-These snippets were translated using gpt-4o, and tested and tweaked by me.
+Some of the earlier snippets were translated using GPT-4O (I got the hang of Tempel's syntax after some time), and tested and tweaked by me.
 
 #+html: <table><tr><td><img src="https://github.com/gs-101/tempel-snippets/blob/screenshots/bibtex.gif?raw=true" align="left"></td><td><img src="https://github.com/gs-101/tempel-snippets/blob/screenshots/nix.gif?raw=true" align="left"></td><td><img src="https://github.com/gs-101/tempel-snippets/blob/screenshots/emacs-lisp.gif?raw=true" align="left"></td></tr></table>
 
