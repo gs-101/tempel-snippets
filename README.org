@@ -87,3 +87,4 @@ There's some issues with indentation, specially in the insertion of brackets.
 - [[https://github.com/AndreaCrotti][Andrea Crotti]], maintainer of [[https://github.com/AndreaCrotti/yasnippet-snippets][YASnippet Snippets]]
 - [[https://github.com/AndreaCrotti/yasnippet-snippets/graphs/contributors][YASnippet Snippets Contributors]]
 - [[https://github.com/abingham][Austin Bingham]], creator of [[https://github.com/abingham/elm-yasnippets][elm-yasnippets]]
+- [[https://github.com/brownts][Troy Brown]], creator of [[https://github.com/brownts/gpr-yasnippets][gpr-yasnippets]]
