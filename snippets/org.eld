@@ -4,8 +4,8 @@ org-mode
  "#+author: " q)
 
 (c
- "#+begin_center" n
- q n
+ "#+begin_center" n>
+ q n>
  "#+end_center")
 
 (da
@@ -18,19 +18,19 @@ org-mode
  "#+email: " q)
 
 (dot_
- "#+begin_src dot :file " p " :cmdline -t " (p "type") " :exports none :results silent" n
- p n
- "#+end_src" n
+ "#+begin_src dot :file " p " :cmdline -t " (p "type") " :exports none :results silent" n>
+ p n>
+ "#+end_src" n>
  "[[file:" (p "path") "]]")
 
 (elisp_
- "#+begin_src emacs-lisp :tangle yes" n
- q n
+ "#+begin_src emacs-lisp :tangle yes" n>
+ q n>
  "#+end_src")
 
 (emacs-lisp_
- "#+begin_src emacs-lisp :tangle yes" n
- q n
+ "#+begin_src emacs-lisp :tangle yes" n>
+ q n>
  "#+end_src")
 
 (em
@@ -40,21 +40,21 @@ org-mode
  "src_" (p "lang") "[" (p "where") "]" "{" p "}")
 
 (entry_
- "#+begin_html" n
- "---" n
- "layout: " p n
- "title: " p n
- "---" n
+ "#+begin_html" n>
+ "---" n>
+ "layout: " p n>
+ "title: " p n>
+ "---" n>
  "#+end_html")
 
 (e
- "#+begin_example" n
- q n
+ "#+begin_example" n>
+ q n>
  "#+end_example")
 
 (ex
- "#+begin_export " (p "type") n
- q n
+ "#+begin_export " (p "type") n>
+ q n>
  "#+end_export")
 
 (fig_
@@ -76,8 +76,8 @@ org-mode
  "#+include: " q)
 
 (ipy_
- "#+begin_src ipython :session " p " :file " p " :exports " p n
- q n
+ "#+begin_src ipython :session " p " :file " p " :exports " p n>
+ q n>
  "#+end_src")
 
 (ke
@@ -90,21 +90,21 @@ org-mode
  "[[" (p "link") "][" (p "description") "]]")
 
 (matrix_
- "\\begin{array}{" (p "align") "}" n
- q n
+ "\\begin{array}{" (p "align") "}" n>
+ q n>
  "\\end{array}")
 
 (op
  "#+options: " q)
 
 (py_
- "#+begin_src python" n
- q n
+ "#+begin_src python" n>
+ q n>
  "#+end_src")
 
 (q
- "#+begin_quote" n
- q n
+ "#+begin_quote" n>
+ q n>
  "#+end_quote")
 
 (rsb
@@ -122,8 +122,8 @@ org-mode
  "#+setupfile: " q)
 
 (src
- "#+begin_src " q n
- n
+ "#+begin_src " q n>
+ n>
  "#+end_src")
 
 (st
@@ -138,13 +138,13 @@ org-mode
  "#+title: " q)
 
 (uml
- "#+begin_uml" n
- p n
+ "#+begin_uml" n>
+ p n>
  "#+end_uml")
 
 (v
- "#+begin_verse" n
- q n
+ "#+begin_verse" n>
+ q n>
  "#+end_verse")
 
 (vi
