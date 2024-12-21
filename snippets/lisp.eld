@@ -147,11 +147,11 @@ lisp-mode
 
 (for
  "(dotimes (" (p "var") " " (p "count-form") ")" n>
- (p "body") ")")
+ q ")")
 
 (foreach
  "(dolist (" (p "var") " " (p "list-form") ")" n>
- (p "body"))
+ q ")")
 
 (format
  "(format t \"~& " q " ~%\")")
