@@ -440,7 +440,7 @@ terraform-mode
  "subnetwork  = \"" (p "subnet_id") "\"" n>
  "role        = \"" p "\"" n>
  "members     = [" n>
- "\"" (p (user-mail-address)) "\"," n>
+ "\"" (p (message-user-mail-address)) "\"," n>
  "]" n
  "}")
 
