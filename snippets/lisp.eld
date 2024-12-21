@@ -154,7 +154,7 @@ lisp-mode
  q ")")
 
 (format
- "(format t \"~& " q " ~%\")")
+ "(format " (p "nil") " " (p "str") " " q ")")
 
 (gnupl
  ";;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp; -*-" n
