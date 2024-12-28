@@ -1,6 +1,6 @@
 fish-mode
 
-(bang
+(!
  "#!/usr/bin/env fish")
 
 (block

@@ -1,6 +1,6 @@
 python-base-mode
 
-(\#\!
+(!
  "#!/usr/bin/env python")
 
 (\.

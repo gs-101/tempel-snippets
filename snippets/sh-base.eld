@@ -37,7 +37,7 @@ sh-base-mode
  "else " (p "other") n>
  "fi")
 
-(s!
+(!s
  "#!/usr/bin/env bash" n>
  "set -euo pipefail" n>
  "IFS=$'" "\\n\\t'")

@@ -42,7 +42,7 @@ ruby-mode ruby-ts-mode
 (\@
  "@" (p "attr")  " = " q)
 
-(\#\!
+(!
  "#!/usr/bin/env ruby")
 
 (bench

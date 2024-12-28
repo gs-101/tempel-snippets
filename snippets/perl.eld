@@ -1,6 +1,6 @@
 perl-mode
 
-(\!
+(!
  "#!/usr/bin/env perl" n>
  q)
 
