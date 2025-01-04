@@ -6,6 +6,33 @@ clojure-mode clojure-ts-mode
 (->>
  "(->> " p ")")
 
+(:db-doc
+ ":db/doc true")
+
+(:db-ft
+ ":db/fulltext true")
+
+(:db-i
+ ":db/index true")
+
+(:db-ic
+ ":db/isComponent true")
+
+(:db-nh
+ ":db/noHistory true")
+
+(:db-u
+ ":db/unique :db.unique/identity")
+
+(:dbcm
+ ":db/cardinality :db.cardinality/many")
+
+(:dbui
+ ":db/unique :db.unique/identity")
+
+(:dbvr
+ ":db/valueType :db.type/ref")
+
 (bench
  "(dotimes [_ 5]" n>
  "(time (dotimes [i 1000000]" n>
@@ -61,6 +88,57 @@ clojure-mode clojure-ts-mode
  "(doseq [" p " " p "]" n>
  p ")" n>
  q)
+
+(dsa
+ "{:db/ident :" (p "ident") n
+ ":db/valueType dst" p n
+ ":db/cardinality :db.cardinality/" (p "one") "}")
+
+(dsf
+ "{:db/ident :" (p "ident") n
+ ":db/doc \"" p "\"" n
+ ":db/fn #db/fn {:lang \"clojure\"" n>
+ ":params [db " p "]" n>
+ ":code (" q ")}}")
+
+(dst-b
+ ":db.type/bytes")
+
+(dst-bo
+ ":db.type/boolean")
+
+(dst-d
+ ":db.type/bigdec")
+
+(dst-do
+ ":db.type/double")
+
+(dst-f
+ ":db.type/float")
+
+(dst-i
+ ":db.type/bigint")
+
+(dst-inst
+ ":db.type/instant")
+
+(dst-k
+ ":db.type/keyword")
+
+(dst-l
+ ":db.type/long")
+
+(dst-r
+ ":db.type/ref")
+
+(dst-s
+ ":db.type/string")
+
+(dst-uri
+ ":db.type/uri")
+
+(dst-uuid
+ ":db.type/uuid")
 
 (fdef
  "(s/fdef " (p "function-name") n>

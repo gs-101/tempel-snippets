@@ -90,3 +90,4 @@ There's some issues with indentation, specially in the insertion of brackets.
 - [[https://github.com/brownts][Troy Brown]], creator of [[https://github.com/brownts/gpr-yasnippets][gpr-yasnippets]]
 - [[https://github.com/mrkkrp][Mark Karpov]], creator of [[https://github.com/mrkkrp/common-lisp-snippets][common-lisp-snippets]]
 - [[https://github.com/uberkael][Adriano M.]], creator of [[https://github.com/uberkael/awk-yasnippets][awk-yasnippets]]
+- [[https://github.com/magnars][Magnar Sveen]], creator of [[https://github.com/magnars/datomic-snippets][datomic-snippets]]
