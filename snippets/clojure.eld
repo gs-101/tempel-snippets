@@ -87,7 +87,7 @@ clojure-mode clojure-ts-mode
  q)
 
 (import
- "(:import (" (p "Class") "))")
+ "(:import (" q "))")
 
 (is
  "(is (= " (p "expected") " " (p "actual") "))")
