@@ -114,7 +114,7 @@ clojure-mode clojure-ts-mode
  "(map #(" (p "body") ") " (p "collection") ")")
 
 (mdoc
- "^{:doc \"" p "\"}")
+ "^{:doc \"" q "\"}")
 
 (ns
  "(ns " p ")")
