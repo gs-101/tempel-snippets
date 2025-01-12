@@ -42,6 +42,9 @@ go-mode go-ts-mode
  p n>
  "}")
 
+(q
+ "os.Exit(" (p "0") ")" q)
+
 (for
  "for " p " {" n>
  p n>
@@ -53,10 +56,26 @@ go-mode go-ts-mode
  p n>
  "}")
 
+(helloworld
+ "package main" n
+ n
+ "import \"fmt\"" n
+ n
+ "func main() {" n>
+ "fmt.Printf(\"Hello, World!\\n\")" n
+ "}")
+
 (if
     "if " p " {" n>
     p n>
     "}")
+
+(ifelse
+ "if " (p "condition") " {" n>
+ p n
+ "} else {" n>
+ p n
+ "}")
 
 (iferr
  "if err != " p " {" n>
@@ -78,6 +97,12 @@ go-mode go-ts-mode
  p n>
  "}")
 
+(interface
+ "type " (p "InterfaceName") " interface {" n>
+ (p "MethodName") "()	" (p "ReturnType") n>
+ q n
+ "}")
+
 (lambda
   "func(" (p "args") ") " (p "returns") " {" n>
   p n>
@@ -87,6 +112,10 @@ go-mode go-ts-mode
  "func main() {" n>
  p n>
  "}")
+
+(make
+ "make(" (p "Type") ", " (p "startingSize") ", " (p "memorySize") ")" n>
+ q)
 
 (map
  "map[" (p "key-type") "]" (p "value-type"))
@@ -113,6 +142,12 @@ go-mode go-ts-mode
  "select {" n>
  "case " (p "condition") ":" n>
  p n>
+ "}")
+
+(struct
+ "type " (p "StructName") " struct {" n>
+ (p "VariableName") "	" (p "Type") n>
+ q n
  "}")
 
 (sw

@@ -93,3 +93,4 @@ There's some issues with indentation, specially in the insertion of brackets.
 - [[https://github.com/magnars][Magnar Sveen]], creator of [[https://github.com/magnars/datomic-snippets][datomic-snippets]]
 - [[https://github.com/jhradilek][Jaromír Hradílek]], maintainer of [[https://github.com/jhradilek/emacs-docbook-snippets][emacs-docbook-snippets]]
 - [[https://github.com/hisea][Yinghai Zao]], creator of [[https://github.com/hisea/elixir-yasnippets][elixir-yasnippets]]
+- [[https://github.com/toumorokoshi][Yusuke Tsutsumi]], creator of [[https://github.com/toumorokoshi/go-snippets][go-snippets]]
