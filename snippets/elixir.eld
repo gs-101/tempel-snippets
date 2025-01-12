@@ -4,6 +4,22 @@ elixir-mode elixir-ts-mode
  "after " (p "500") " ->" n>
  q)
 
+(application
+ "defmodule " (p "MyApp") " do" n
+ "use Application" n
+ n
+ "def start(_type, _args) do" n
+ p ".Supervisor.start_link()" q n
+ "end" n
+ "end")
+
+(behaviour
+ "defmodule " (p "MyBehaviour") " do" n
+ "use Behaviour" n
+ n
+ "defcallback " (p "function :: any") n
+ "end")
+
 (call
  "GenServer.call(" (p "__MODULE__") ", " p ")")
 
@@ -25,10 +41,15 @@ elixir-mode elixir-ts-mode
  p n
  "end")
 
-(defmacro
- "defmacro " (p "macro_name") " do" n>
- p n
+(defimpl
+ "defimpl " (p "Type") ", for: " (p "Protocol") " do" n>
+ "def " (p "callback(args)") n
  "end")
+
+(defmacro
+    "defmacro " (p "macro_name") " do" n>
+    q n
+    "end")
 
 (defmacrop
  "defmacrop " (p "macro_name") " do" n>
@@ -48,6 +69,18 @@ elixir-mode elixir-ts-mode
 (defp
  "defp " (p "func") " do" n>
  p n
+
+(defprotocol
+ "defprotocol " (p "Protocol") " do" n
+ "def " (p "callback(args)") n
+ "end")
+
+(df
+ "def " (p "function") "(" (p "args") ")" ", do: " q)
+
+(dfun
+ "def " (p "function") "(" (p "args") ")" " do" n>
+ q n
  "end")
 
 (do
@@ -68,13 +101,15 @@ elixir-mode elixir-ts-mode
  (s x) " " p n
  "end")
 
-(dfun
- "def " (p "function") "(" (p "args") ")" " do" n>
- p n
+(genevent
+ "defmodule " (p "EventHandler") " do" n
+ "use GenEvent" n
+ n
+ "def handle_event(event, parent) do" n
+ (p "send parent, event") n
+ (p "ok, parent") n
+ "end"
  "end")
-
-(df
- "def " (p "function") "(" (p "args") ")" ", do: " q)
 
 (hcall
  "def handle_call(" (p "msg") ", _from, " (p "state") ") do" n>
@@ -123,6 +158,22 @@ elixir-mode elixir-ts-mode
 (rcv
  "receive do" n>
  p n
+
+(supervisor
+ "defmodule " (p "Module") ".Supervisor do" n
+ "use Supervisor" n
+ n
+ "def start_link do" n
+ "Supervisor.start_link(__MODULE__, :ok)" n
+ "end" n
+ n
+ "def init(:ok) do" n
+ "children = [" n
+ q n
+ "]" n
+ "supervise(children, strategy: :one_for_one)" n
+ "end" n
+ n
  "end")
 
 (test
