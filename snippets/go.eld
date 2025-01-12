@@ -47,7 +47,7 @@ go-mode go-ts-mode
 
 (for
  "for " p " {" n>
- p n>
+ q n>
  "}")
 
 (func
@@ -67,7 +67,7 @@ go-mode go-ts-mode
 
 (if
     "if " p " {" n>
-    p n>
+    q n>
     "}")
 
 (ifelse
@@ -110,7 +110,7 @@ go-mode go-ts-mode
 
 (main
  "func main() {" n>
- p n>
+ q n>
  "}")
 
 (make
