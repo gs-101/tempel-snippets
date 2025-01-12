@@ -25,7 +25,7 @@ elixir-mode elixir-ts-mode
 
 (case
  "case " (p "expression") " do" n>
- p n
+ q n
  "end")
 
 (cast
@@ -33,12 +33,12 @@ elixir-mode elixir-ts-mode
 
 (cond
  "cond do" n>
- p n
+ q n
  "end")
 
 (def
  "def " (p "function") " " (p "(args)") " do" n>
- p n
+ q n
  "end")
 
 (defimpl
@@ -53,22 +53,23 @@ elixir-mode elixir-ts-mode
 
 (defmacrop
  "defmacrop " (p "macro_name") " do" n>
- p n
+ q n
  "end")
 
 (defmodule
  "defmodule " (p "ModuleName") " do" n>
- p n
+ q n
  "end")
 
 (dm
  "defmodule " (p (buffer-name)) " ." (p (buffer-name)) " _ do" n>
- p n
+ q n
  "end")
 
 (defp
- "defp " (p "func") " do" n>
- p n
+ "defp " (p "func") " " (p "(args)") " do" n>
+ q n
+ "end")
 
 (defprotocol
  "defprotocol " (p "Protocol") " do" n
@@ -85,12 +86,12 @@ elixir-mode elixir-ts-mode
 
 (do
  "do" n>
- p n
+ q n
  "end")
 
 (doc
  "@doc \"\"\"" n>
- p n
+ q n
  "\"\"\"")
 
 (fn
@@ -113,29 +114,29 @@ elixir-mode elixir-ts-mode
 
 (hcall
  "def handle_call(" (p "msg") ", _from, " (p "state") ") do" n>
- p n
+ q n
  "end")
 
 (hcast
  "def handle_cast(" (p "msg") ", " (p "state") ") do" n>
- p n
+ q n
  "end")
 
 (hinfo
  "def handle_info(" (p "msg") ", " (p "state") ") do" n>
- p n
+ q n
  "end")
 
 (if
  "if " (p "condition") " do" n>
- p n
+ q n
  "end")
 
 (ife
  "if " (p "condition") " do" n>
  (p "then") n>
  "else" n>
- p n
+ q n
  "end")
 
 (i
@@ -149,7 +150,7 @@ elixir-mode elixir-ts-mode
 
 (mdoc
  "@moduledoc \"\"\"" n>
- p n
+ q n
  "\"\"\"")
 
 (pry
@@ -157,7 +158,8 @@ elixir-mode elixir-ts-mode
 
 (rcv
  "receive do" n>
- p n
+ q n
+ "end")
 
 (supervisor
  "defmodule " (p "Module") ".Supervisor do" n
@@ -178,17 +180,17 @@ elixir-mode elixir-ts-mode
 
 (test
  "test \"" p "\" do" n>
- p n
+ q n
  "end")
 
 (unless
     "unless " (p "condition") " do" n>
-    p n
+    q n
     "end")
 
 (wt
  "with " (p "ok, tuple") " <- function(arg), do" n>
- p n
+ q n
  "end")
 
 (wte
