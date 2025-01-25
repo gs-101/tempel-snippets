@@ -11,10 +11,16 @@ java-mode java-ts-mode
 (as
  "assert " (p "expression") ";")
 
+(abs
+ "abstract " q)
+
 (apr_assert
  "if (Globals.useAssertions) {" n>
  (p "assert") ";" n
  "}")
+
+(boo
+ "boolean " q)
 
 (c
  "public " (p (file-name-base
@@ -45,6 +51,9 @@ java-mode java-ts-mode
  p n
  "}")
 
+(fin
+ "final " q)
+
 (for
  "for (" (p "int i = 0;") "; " (p "i < N") "; " (p "i++") ") {" n>
  p n
@@ -58,6 +67,13 @@ java-mode java-ts-mode
 (g
  "public " (p "int") " get" (p "Field" Field) "() {" n>
  "return " (s Field) ";" n>
+ "}")
+
+(helloworld
+ "public class " (p (file-name-sans-extension (buffer-name))) "{" n>
+ "public static void main(String[] args) {" n>
+ "System.out.println(\"Hello, World!\");" n>
+ "}" n
  "}")
 
 (if
@@ -89,9 +105,22 @@ java-mode java-ts-mode
 (lambda
   "(" (p "args") ") -> " (p "expression") ";")
 
+(list
+ "List<" (p "String") "> " (p "list") " = new ArrayList<>();" q)
+
+(m
+ (p (completing-read "Choose a modifier: " '("public" "private" "protected" ""))) " {" n>
+ q n
+ "}")
+
 (main
  "public static void main(String[] args) {" n>
  p n
+ "}")
+
+(maine
+ "public static void main(String[] args) throws Exception {" n>
+ q n
  "}")
 
 (main_class
@@ -105,10 +134,8 @@ java-mode java-ts-mode
  "}" n>
  "}")
 
-(m
- (p (completing-read "Choose a modifier: " '("public" "private" "protected" ""))) " {" n>
- q n
- "}")
+(map
+ "Map<" (p "String") ", " (p "Object") "> " (p "map") " = new HashMap<>();" q)
 
 (new
  (p "Type") " " (p "obj") " = new " (p "Constr") "(" (p "args") ");" n>
@@ -118,18 +145,54 @@ java-mode java-ts-mode
  "@Override " n>
  q)
 
+(O
+ "Object " q)
+
+(pa
+ "package " (p (mapconcat 'identity (split-string (replace-regexp-in-string ".*src\\(/\\(main\\|test\\)\\)?\\(/java\\)?" "" default-directory) "/" t) ".")) ";" n>
+ q)
+
 (param
  "@param " (p "parameter") " " p)
+
+(pri
+ "private " q)
+
+(pro
+ "protected " q)
 
 (printf
  "System.out.printf(\"" (p "format%n") "\");")
 
-(pr
+(println
  "System.out.println(\"" (p "text") "\");" n>
  q)
 
+(pub
+ "public " q)
+
 (r
- "return " q)
+ "return " q ";")
+
+(s
+ "static " q)
+
+(S
+ "String " q)
+
+(set
+ "Set<" (p "String") "> " (p "set") " = new HashSet<>();" q)
+
+(sleep
+ "try {" n>
+ "Thread.sleep(" (p "1000") ");" n>
+ "} catch (InterruptedException ignore) { }" n>
+ q)
+
+(sync
+ "synchronized (" (p "this") ") {" n>
+ q n
+ "}")
 
 (tc
  "import junit.framework.*;" n>
@@ -150,6 +213,16 @@ java-mode java-ts-mode
  "this." (p "field" field) " = " (s field) ";" n>
  q)
 
+(thr
+ "throws " q)
+
+(thread
+ "Thread t = new Thread(" p ") {" n>
+ "public void run() {" n>
+ q n>
+ "}" n
+ "}.start();")
+
 (try
  "try {" n>
  p n>
@@ -158,10 +231,32 @@ java-mode java-ts-mode
  (p "e.printStackTrace();") n
  "}")
 
+(tryc
+ "try {" n>
+ q n
+ "} catch (" (p "Exception") " " (p "ex") ") {" n
+ "}")
+
+(tryf
+ "try {" n>
+ q n
+ "} finally {" n
+ "}")
+
+(trycf
+ "try {" n>
+ q n
+ "} catch (" (p "Exception") " " (p "ex") ") {" n
+ "} finally {" n
+ "}")
+
 (toStr
  "public String toString() {" n>
  p n
  "}")
+
+(v
+ "void " q)
 
 (val
  "final " (p "Type") " " (p "name") " = " (p "value") ";")

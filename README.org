@@ -95,3 +95,4 @@ There's some issues with indentation, specially in the insertion of brackets.
 - [[https://github.com/hisea][Yinghai Zao]], creator of [[https://github.com/hisea/elixir-yasnippets][elixir-yasnippets]]
 - [[https://github.com/toumorokoshi][Yusuke Tsutsumi]], creator of [[https://github.com/toumorokoshi/go-snippets][go-snippets]]
 - [[https://github.com/lukehoersten][Luke Hoersten]], creator of [[https://github.com/haskell/haskell-snippets][haskell-snippets]]
+- [[https://github.com/nekop][Takayoshi Kimura]], maintainer of [[https://github.com/nekop/yasnippet-java-mode][yasnippet-java-mode]]
