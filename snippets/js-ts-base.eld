@@ -1,4 +1,4 @@
-js-base-mode
+js-base-mode typescript-ts-base-mode
 
 (al
  "alert(" q ");")
