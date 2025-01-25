@@ -89,7 +89,7 @@ java-mode java-ts-mode
  "}")
 
 (imp
- "import " (p "package") ";")
+ "import " q ";")
 
 (iterator
  "public Iterator<" (p "type") "> iterator() {" n>
@@ -252,7 +252,7 @@ java-mode java-ts-mode
 
 (toStr
  "public String toString() {" n>
- p n
+ q n
  "}")
 
 (v
