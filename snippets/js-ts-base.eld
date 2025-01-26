@@ -1,12 +1,31 @@
 js-base-mode typescript-ts-base-mode
 
+(actions
+ "actions: {" n>
+ (p "// Body") n
+ "}")
+
 (al
  "alert(" q ");")
+
+(alias
+ (p "foo") ": Ember.computed.alias('" (p "property") "'),")
+
+(and
+ "andThen(function() {" n
+ q n
+ "});")
 
 (anfn
  "(" (p "params") ")" " => {" n>
  (p "body") n
  "}")
+
+(attr
+ (p "name") ": DS.attr('" (p "type") "')")
+
+(belongs
+ (p "name") ": DS.belongsTo('" (p "type") "'),")
 
 (bnd
  "this." (p "methodName" methodName) " = this." (s methodName) ".bind(this)" q)
@@ -34,6 +53,9 @@ js-base-mode typescript-ts-base-mode
 
 (cin
  "console.info(" (p "object") ")")
+
+(cl
+ "click('" (p "selector") "');")
 
 (clg
  "console.log(" (p "object") ")")
@@ -129,10 +151,22 @@ js-base-mode typescript-ts-base-mode
 (exp
  "export default " p)
 
+(fill
+ "fiilIn('" (p "selector") "', " (p "text") ");")
+
 (fin
  "for(let " (p "item") " in " (p "object") ") {" n>
  q n>
  "}")
+
+(find
+ "find('" (p "selector") "')")
+
+(find-id
+ "this.store.find('" (p "model") "', params." (p "model") "_id);")
+
+(find-store
+ "this.store.find('" (p "model") "');")
 
 (flow
  "/* @flow */")
@@ -156,6 +190,9 @@ js-base-mode typescript-ts-base-mode
  "function " (p "name") "(" (p "arg") ") {" n>
  q n>
  "}")
+
+(hasmany
+ (p "name") ": DS.hasMany('" (p "type") "'),")
 
 (if
     "if (" (p "condition") ") {" n>
@@ -183,8 +220,17 @@ js-base-mode typescript-ts-base-mode
  q n
  "}")
 
+(inject
+ (p "fooService") ": Ember.inject." (p (completing-read "Choose: " '("service" "controller"))) "('" (p "name") "'),")
+
+(key
+ "keyEvent('" (p "selector") "', '" (p "type") "', " (p "keyCode") ");")
+
 (let
- "let " (p "name") " = " (p "initial") ";")
+    "let " (p "name") " = " (p "initial") ";")
+
+(logger-debug
+ "Ember.Logger.Debug('" (p "message") "');")
 
 (met
  (p "name") "(" (p "arg") ") {" n>
@@ -201,6 +247,19 @@ js-base-mode typescript-ts-base-mode
  q n
  "}")
 
+(observer
+ (p "fooChanged") ": Ember.computed('" (p "dependencies") "', function() {" n>
+ (p "// Body") n
+ "}),")
+
+(on
+ (p "onEvent") ": Ember.computed('" (p "eventName") "', function() {" n>
+ (p "// Body") n
+ "}),")
+
+(path
+ "currentPath()")
+
 (pge
  "get " (p "propertyName") "() {" n>
  "return this." (p "propertyName") n
@@ -211,10 +270,38 @@ js-base-mode typescript-ts-base-mode
  q n
  "})")
 
+(prop
+ (p "fooProp") ": Ember.computed('" (p "dependencies") "', function() {" n>
+ (p "// Body") n
+ "}),")
+
 (pse
  "set " (p "propertyName") "(" (p "value") ") {" n>
  q n
  "}")
+
+(reads
+ (p "foo") ": Ember.computed.reads('" (p "property") "'),")
+
+(rn
+ "currentRouteName()")
+
+(run
+ "Ember.run(" (p "this, ") "function() {" n>
+ (p "// Body") n
+ "});")
+
+(runonce
+ "Ember.run.once(" (p "this") ", '" (p "functionName") "');")
+
+(setprop
+ (p "fooProp") ": Ember.computed('" (p "dependencies") "', {" n
+ "get() {" n
+ p n
+ "}," n
+ "set(key, value) {" n
+ p n
+ "}),")
 
 (sti
  "setInterval(() => {" n>
@@ -234,6 +321,9 @@ js-base-mode typescript-ts-base-mode
  "default:" n
  "}")
 
+(trig
+ "triggerEvent('" (p "selector") "', '" (p "eventType") "');")
+
 (try
 "try {" n>
 p n>
@@ -242,3 +332,9 @@ p n>
  "} finally {" n>
  p n
 "}")
+
+(url
+ "currentURL()")
+
+(vi
+ "visit('" q "');")
