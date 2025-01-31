@@ -74,7 +74,7 @@ emacs-lisp-mode
  q ")")
 
 (defalias
-  "(defalaias '" (p "symbol") " '" (p "alias") " \"" (p "docstring") "\")")
+  "(defalias '" (p "symbol") " '" (p "alias") " \"" (p "docstring") "\")")
 
 (defcustom
   "(defcustom " (p "symbol") " " (p "standard") " \"" (p "docstring") "\"" " " (p "args") ")")
