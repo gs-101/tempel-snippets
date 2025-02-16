@@ -954,7 +954,7 @@ nxml-mode
  "</msgtext>")
 
 (name
- "<a name=\"" p "\"></a>")
+ "<a name=\"" q "\"></a>")
 
 (netmask
  "<systemitem class=\"netmask\">" p "</systemitem>" q)
