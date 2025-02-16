@@ -22,19 +22,19 @@ html-mode html-ts-mode
 (doctype
  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">")
 
-(doctype.html5
+(doctype-html5
  "<!DOCTYPE html>")
 
-(dotype_xhtml1
+(doctype-xhtml1
  "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">")
 
-(dotype_xhtml1_1
+(doctype-xhtml1-1
  "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">")
 
-(dotype_xhtml1_strict
+(doctype-xhtml1-strict
  "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">")
 
-(dotype_xhtml1_transitional
+(doctype-xhtml1-transitional
  "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">")
 
 (dt
