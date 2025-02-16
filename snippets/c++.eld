@@ -499,9 +499,6 @@ c++-mode c++-ts-mode
 (this
  "this")
 
-(template
- (p "template<") (p "typename T>") n> p n> "}")
-
 (throw
  "throw " (p "MyError") "(" p ");")
 
