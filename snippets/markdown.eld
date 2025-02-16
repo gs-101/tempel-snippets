@@ -11,17 +11,17 @@ markdown-mode markdown-ts-mode
 (emphasis
  "_" (p "Text") "_ ")
 
-(h1\.1
+(h1-1
  "# " (p "Header 1") " #")
 
-(h1\.2
+(h1-2
  "# " (p "Header 1" header1) " #" n
  (p (make-string (length header1) ?=)))
 
-(h2\.1
+(h2-1
  "## " (p "Header 2") " ##")
 
-(h2\.2
+(h2-2
  "# " (p "Header 2" header2) " #" n
  (p (make-string (length header2) ?-)))
 
@@ -42,10 +42,10 @@ markdown-mode markdown-ts-mode
  q n
  "{% endhighlight %}")
 
-(hr\.1
+(hr-1
  "----------")
 
-(hr\.2
+(hr-2
  "*******")
 
 (hyphen
