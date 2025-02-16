@@ -3,7 +3,7 @@ css-mode css-ts-mode
 (bg
  "background-color: #" (p "DD") ";")
 
-(bg\.1
+(bg-1
  "background-image: url(" q ");")
 
 (bor
