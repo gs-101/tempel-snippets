@@ -78,4 +78,4 @@ scala-mode scala-ts-mode
  "}")
 
 (vc
- "case class " (p "Name") " (value: " (p "Type") ") extends AnyVal)")
+ "case class " (p "Name") " (value: " (p "Type") ") extends AnyVal")
