@@ -12,6 +12,9 @@ c-mode c-ts-mode
 (fgets
  "fgets(" (p "variable") ", " (p "size") ", " (p "stdin") ");")
 
+(fopen
+ "FILE *" (p "fp") " = fopen(" (p "\"file\"") ", \"" (p "r") "\");")
+
 (fprintf
  "fprintf(" (p "stdout") ", \"" (p "format string") "\", " (p "variable") ");")
 

@@ -403,6 +403,9 @@ nxml-mode
 (disk
  "<medialabel class=\"disk\">" p "</medialabel>" q)
 
+(div
+ "<div" p ">" q "</div>")
+
 (doctype
  "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">")
 
@@ -633,8 +636,31 @@ nxml-mode
 (guisubmenu
  "<guisubmenu>" p "</guisubmenu>" q)
 
+(h1
+ "<h1>" q "</h1>")
+
+(h2
+ "<h2>" q "</h2>")
+
+(h3
+ "<h3>" q "</h3>")
+
+(h4
+ "<h4>" q "</h4>")
+
+(h5
+ "<h5>" q "</h5>")
+
+(h6
+ "<h6>" q "</h6>")
+
 (hardware
  "<hardware>" p "</hardware>" q)
+
+(head
+ "<head>" n>
+ q n
+ "</head>")
 
 (headerfile
  "<filename class\"headerfile\">" p "</filename>" q)
@@ -649,6 +675,9 @@ nxml-mode
 
 (honorific
  "<honorific>" p "</honorific>" q)
+
+(hr
+ "<hr />")
 
 (html
  "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"" (p "en") "\" lang=\"" (p "en") "\">" n
@@ -806,6 +835,9 @@ nxml-mode
  "<legalnotice>" n>
  q n
  "</legalnotice>")
+
+(li
+ "<li>" q "</li>")
 
 (library
  "<systemitem class=\"library\">" p "</systemitem>" q)
@@ -972,6 +1004,11 @@ nxml-mode
  q n
  "</objectinfo>")
 
+(ol
+ "<ol>" n>
+ q n
+ "</ol>")
+
 (olink
  "<olink targetdocent=\"" p "\">" p "</olink>" q)
 
@@ -1014,6 +1051,9 @@ nxml-mode
 
 (othername
  "<othername>" p "</othername>" q)
+
+(p
+ "<p>" q "</p>")
 
 (package
  "<package>" p "</package>" q)
@@ -1069,6 +1109,11 @@ nxml-mode
 
 (postcode
  "<postcode>" p "</postcode>" q)
+
+(pre
+ "<pre>" n>
+ q n
+ "</pre>")
 
 (preface
  "<preface id=\"" p "\"" n>
@@ -1484,6 +1529,9 @@ nxml-mode
  q n
  "</simplesect>")
 
+(span
+ "<span>" q "</span>")
+
 (spanspec
  "<spanspec spanname=\"" p "\" nameset=\"" p "\" nameend=\"" p "\" />" q)
 
@@ -1579,6 +1627,14 @@ nxml-mode
  "<table id=\"" p "\">" n>
  q n
  "</table>")
+
+(tag
+ "<" (p "tag") ">" p "</" p ">" q)
+
+(tag-2l
+ "<" (p "tag") ">" n>
+ p n
+ "</" p ">" q)
 
 (task
  "<task id=\"" p "\">" n>
@@ -1734,6 +1790,11 @@ nxml-mode
 
 (type
  "<type>" p "</type>" q)
+
+(ul
+ "<ul>" n>
+ q n
+ "</ul>")
 
 (ulink
  "<ulink url=\"" p "\">" p "</ulink>" q)

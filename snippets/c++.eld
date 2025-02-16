@@ -944,7 +944,7 @@ c++-mode c++-ts-mode
  q)
 
 (template
- "template<" (p "typename" "class" t) " " (p "T") ">" n
+ "template<typename " (p "T") ">"
  q)
 
 (test_case

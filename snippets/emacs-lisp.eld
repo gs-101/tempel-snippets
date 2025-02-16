@@ -6,6 +6,12 @@ emacs-lisp-mode
 (ah
  "(add-hook '" (p "name") "-hook '" (p "function") ")")
 
+(append
+ "(append " q ")")
+
+(apply
+ "(apply " q ")")
+
 (aref
  "(aref " (p "array") " " (p "index") ")")
 
@@ -42,6 +48,9 @@ emacs-lisp-mode
 (ca
  "(custom-autoload " (p "symbol") " " (p "load") " " (p "noset") ")")
 
+(car
+ "(car " q ")")
+
 (cb
  "(current-buffer)")
 
@@ -51,12 +60,24 @@ emacs-lisp-mode
 (cd
  "(copy-directory " (p "directory") " " (p "target") " " (p "keep-time") (p " parents") ")")
 
+(cdr
+ "(cdr " q ")")
+
 (cf
  "(copy-file " (p "filename") " " (p "newname") " " (p "ok-if-already-exists") " " (p "keep-time") " " (p "preserve-uid-gid") ")")
+
+(concat
+ "(concat " q ")")
 
 (cond
  "(cond" n>
  "(" (p "condition") " " (p "body") ")" q ")")
+
+(cons
+ "(cons " q ")")
+
+(consp
+ "(consp " q ")")
 
 (const
  "(defconst " (p "name") " " (p "value") " \"" (p "docstring") "\"")
@@ -79,6 +100,9 @@ emacs-lisp-mode
 (defcustom
   "(defcustom " (p "symbol") " " (p "standard") " \"" (p "docstring") "\"" " " (p "args") ")")
 
+(defsubst
+    "(defsubst " q ")")
+
 (defvar
   "(defvar " (p "symbol") " " (p "initvalue") " \"" (p "docstring") "\")")
 
@@ -87,6 +111,10 @@ emacs-lisp-mode
 
 (dirf
  "(directory-files " (p "directory") " " (p "full") " " (p "match") " " (p "nosort") ")")
+
+(dolist
+    "(dolist " q ")")
+
 (dr
  "(delete-region " q ")")
 
@@ -99,6 +127,12 @@ emacs-lisp-mode
 
 (eol
  "(end-of-line)")
+
+(eq
+ "(eq " q ")")
+
+(equal
+ "(equal " q ")")
 
 (error
  "(error \"" (p "message") "\" " (p "format-args") ")")
@@ -133,6 +167,12 @@ emacs-lisp-mode
 (frn
  "(file-name-relative " q ")")
 
+(funcall
+ "(funcall " q ")")
+
+(function
+ "(function " q ")")
+
 (get
  "(get " (p "symbol") " " (p "programme") ")")
 
@@ -141,9 +181,6 @@ emacs-lisp-mode
 
 (gc
  "(goto-char " q ")")
-
-(gsk
- "(global-set-key (kbd \"" (p "key") "\") " p ")")
 
 (header ";;; " (p (file-name-base (or (buffer-file-name) (buffer-name))) file) ".el --- " (p "summary" summary) " -*- lexical-binding: t -*-" n
         n
@@ -187,7 +224,10 @@ emacs-lisp-mode
         ";;; " (s file) ".el ends here")
 
 (i
- "(insert " qp ")")
+ "(insert " q ")")
+
+(if
+    "(if " q ")")
 
 (ifc
  "(infert-file-contents " (p "filename") " " (p "visit") " " (p "beg") " " (p "replace") ")")
@@ -214,11 +254,20 @@ emacs-lisp-mode
 (lbp
  "(line-beginning-position)")
 
+(length
+ "(length " q ")")
+
 (lep
  "(line-end-position)")
 
+(list
+ "(list " q ")")
+
 (mapc
  "(mapc " (p "function") " " q ")")
+
+(mapcar
+ "(mapcar " q ")")
 
 (mb
  "(match-beginning " q ")")
@@ -268,6 +317,9 @@ emacs-lisp-mode
 (nts
  "(number-to-string " q ")")
 
+(null
+ "(null " q ")")
+
 (o
  "(or " q ")")
 
@@ -280,6 +332,18 @@ emacs-lisp-mode
 (point-min
  "(point-min)")
 
+(princ
+ "(princ " q ")")
+
+(print
+ "(print " q ")")
+
+(progn
+  "(progn " q ")")
+
+(push
+ "(push " q ")")
+
 (put
  "(put " (p "symbol") " " (p "propname") " " (p "value") ")")
 
@@ -291,6 +355,12 @@ emacs-lisp-mode
 
 (re
  "(region-end)")
+
+(repeat
+ "(repeat " q ")")
+
+(require
+ "(require " q ")")
 
 (rf
  "(rename-file " (p "file") " " (p "newname") " " (p "ok-if-already-exists") ")")
@@ -328,6 +398,9 @@ emacs-lisp-mode
 (se
  "(save-excursion " q ")")
 
+(set
+ "(set " q ")")
+
 (scf
  "(skip-chars-forward \"" (p "string") "\"" " " (p "lim") ")")
 
@@ -358,14 +431,23 @@ emacs-lisp-mode
 (stn
  "(string-to-number " q ")")
 
+(string
+ "(string " q ")")
+
 (string=
  "(string= " q ")")
+
+(stringp
+ "(stringp " q ")")
 
 (substring
  "(substring " (p "string") " " (p "from") " " (p "to") ")")
 
 (tap
  "(thing-at-point " (p "string") " " (p "no-properties") ")")
+
+(unless
+    "(unless " q ")")
 
 (up
  "(use-package " (p "package-name") n>
@@ -386,6 +468,9 @@ emacs-lisp-mode
 
 (wg
  "(widget-get " q ")")
+
+(while
+    "(while " q ")")
 
 (yonp
  "(yes-or-no-p \"" (p "prompt") "\")")

@@ -8,6 +8,9 @@ ruby-mode ruby-ts-mode
  p n
  "=end")
 
+(classify
+ "classify { |" (p "e") "| " q "}")
+
 (comp
  "include Comparable" n
  n
@@ -76,6 +79,13 @@ ruby-mode ruby-ts-mode
 
 (collect
  "collect { |" (p "e") "| " p " }")
+
+(comp
+ "include Comparable" n
+ n
+ "def <=> other" n>
+ q n
+ "end")
 
 (def
  "def " (p "method") "(" (p "args") ")" n>
@@ -194,6 +204,9 @@ ruby-mode ruby-ts-mode
 
 (req
  "require '" p "'")
+
+(rreq
+ "require File.join(File.dirname(__FILE__), " q)
 
 (rpry
  "require 'pry-remote'; binding.remote_pry")

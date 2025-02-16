@@ -1,5 +1,8 @@
 f90-mode
 
+(au
+ "automatic" q)
+
 (bd
  "block data " q)
 
@@ -23,6 +26,9 @@ f90-mode
 (dp
  "double precision " q)
 
+(eq
+ "equivalence " q)
+
 (forall
  "forall (" p ")" n>
  q n
@@ -42,8 +48,26 @@ f90-mode
     q n
     "end if")
 
+(ib
+ "implicit byte " q)
+
+(ic
+ "implicit complex " q)
+
+(ich
+ "implicit character " q)
+
+(ii
+ "implicit integer " q)
+
+(il
+ "implicit logical " q)
+
 (in
  "implicit none")
+
+(ir
+ "implicit real" q)
 
 (inc
  "include " q)
@@ -93,6 +117,9 @@ f90-mode
 
 (re
  "read (" (p "*") "," (p "*") ") " q)
+
+(st
+ "structure " q)
 
 (subroutine
  "subroutine " (p "name" name) " (" (p "arg" arg) ")" n>
