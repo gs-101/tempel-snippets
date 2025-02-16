@@ -1,7 +1,7 @@
 emacs-lisp-mode
 
 (a
- "(and " p ")")
+ "(and " q ")")
 
 (ah
  "(add-hook '" (p "name") "-hook '" (p "function") ")")
