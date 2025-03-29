@@ -22,7 +22,7 @@ vala-mode
  "} while (" (p "condition") ");")
 
 (enum
- "enum" (p "name") " {" n>
+ "enum " (p "name") " {" n>
  q n
  "}")
 
@@ -72,11 +72,11 @@ vala-mode
 (prop
  "public " (p "type") " " (p "name") " {" n>
  "get { " p ";}" n>
- "set { " p ";}" n
+ "set { " p ";}" n>
  "}" q)
 
 (ps
- "stdout.printf(\"" p "\\n\"" ");" q)
+ "stdout.printf(\"" p "\\n\");" q)
 
 (sig
  "public signal " (p "void") " " (p "name") "(" (p "args") ");" q)
@@ -98,7 +98,7 @@ vala-mode
 (try
  "try {" n>
  q n
- "} catch (" (p "ErrorType") " " (p "e") ") {" n
+ "} catch (" (p "ErrorType") " " (p "e") " {" n>
  n
  "}")
 

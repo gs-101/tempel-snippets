@@ -98,5 +98,5 @@ There's some issues with indentation, specially in the insertion of brackets.
 - [[https://github.com/nekop][Takayoshi Kimura]], maintainer of [[https://github.com/nekop/yasnippet-java-mode][yasnippet-java-mode]]
 - [[https://github.com/ronco][Ron White]], creator of [[https://github.com/ronco/ember-yasnippets.el][ember-yasnippets]]
 - [[https://github.com/npostavs][Noam Postavsky]], maintainer of [[https://elpa.gnu.org/packages/yasnippet-classic-snippets.html][yasnippet-classic-snippets]]
-- [[https://github.com/peterwvj][Peter W. V. Tran-Jørgensen]], creator of [[https://github.com/peterwvj/vdm-mode][vdm-mode]] (and [[https://github.com/peterwvj/vdm-mode/tree/master/snippets/vdm-mode][its snippets]])
-- [[https://github.com/gopar][gopar]], creator of [[https://github.com/gopar/vala-snippets][vala-snippets]]
+- [[https://github.com/peterwvj][Peter W. V. Tran-Jørgensen]], creator of [[https://github.com/peterwvj/vdm-mode][vdm-mode]] (and [[https://github.com/peterwvj/vdm-mode/tree/master/snippets/vdm-mode][its Snippets]])
+- [[https://github.com/gopar][Gopar]], creator of [[https://github.com/gopar/vala-snippets][vala-snippets]]
