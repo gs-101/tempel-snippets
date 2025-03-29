@@ -100,3 +100,4 @@ There's some issues with indentation, specially in the insertion of brackets.
 - [[https://github.com/npostavs][Noam Postavsky]], maintainer of [[https://elpa.gnu.org/packages/yasnippet-classic-snippets.html][yasnippet-classic-snippets]]
 - [[https://github.com/peterwvj][Peter W. V. Tran-Jørgensen]], creator of [[https://github.com/peterwvj/vdm-mode][vdm-mode]] (and [[https://github.com/peterwvj/vdm-mode/tree/master/snippets/vdm-mode][its Snippets]])
 - [[https://github.com/gopar][Gopar]], creator of [[https://github.com/gopar/vala-snippets][vala-snippets]]
+- [[https://github.com/ptrv][prtv]], creator of [[https://github.com/ptrv/sclang-snippets][sclang-snippets]]
