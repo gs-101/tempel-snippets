@@ -41,7 +41,7 @@ rust-mode rust-ts-mode rustic-mode
 (cfg=
  "#[cfg(" (p "option") " = \"" (p "value") "\")]")
 
-(\|\|
+(||
  "|" (p "arguments") "| {" n>
  q n
  "}")
