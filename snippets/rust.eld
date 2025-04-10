@@ -78,10 +78,10 @@ rust-mode rust-ts-mode rustic-mode
  "}")
 
 (eprint
- "eprint!(\"" (p "{\\}") "\", " p ");")
+ "eprint!(\"" (p "{}") "\", " p ");")
 
 (eprintln
- "eprintln!(\"" (p "{\\}") "\", " p ");")
+ "eprintln!(\"" (p "{}") "\", " p ");")
 
 (fn
  "fn " (p "name") "(" p ") {" n>
@@ -237,10 +237,10 @@ rust-mode rust-ts-mode rustic-mode
  "}")
 
 (print
- "print!(\"" (p "{\\}") "\", " p ");")
+ "print!(\"" (p "{}") "\", " p ");")
 
 (println
- "println!(\"" (p "{\\}") "\", " p ");")
+ "println!(\"" (p "{}") "\", " p ");")
 
 (result
  "Result<" (p "Type") ", " (p "failure::Error") ">")
